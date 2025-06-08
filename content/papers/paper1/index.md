@@ -1,17 +1,17 @@
 ---
-title: "Unusual Uses For Olive Oil" 
-date: 2013-01-15
-tags: ["philology","oleic science","history of oil","Mediterranean world"]
-author: ["Detlev Amadeus Unterholzer","Moritz-Maria von Igelfeld"]
-description: "This paper reviews unusual uses for olive oil throughout the Mediterranean world. Published in the Journal of Oleic Science, 2013." 
-summary: "This paper reviews unusual uses for olive oil throughout the Mediterranean world. It highlights in particular the challengs arising from excessive or unorthodox consumption of olive oil." 
+title: "Daisy-Chaining Embedded Processors for Enhanced Capacitive Sensor Array Resolution" 
+date: 2024-04-03
+tags: ["Capacitive Sensor Arrays","Soft Robotics","Human-Robot Interaction","Embedded Systems"]
+author: ["Abhinav Komanduri","Alexander Nelson"]
+description: "CapSense" 
+summary: Capacitive sensing technology is widely applied in ubiquitous sensing. Its low-power consumption enables it to be used in a wide variety of Industry 4.0 applications.
 cover:
-    image: "paper1.png"
-    alt: "Some Uses For Olive Oil"
+    image: "experiment.png"
+    alt: "Proof of concept"
     relative: true
 editPost:
-    URL: "https://github.com/pmichaillat/hugo-website"
-    Text: "Journal of Oleic Science"
+    URL: "https://ieeexplore.ieee.org/xpl/conhome/10520247/proceeding"
+    Text: "IEEE Green Technologies Conference"
 
 ---
 
@@ -19,43 +19,55 @@ editPost:
 
 ##### Download
 
-+ [Paper](paper1.pdf)
-+ [Online appendix](appendix1.pdf)
-+ [Code and data](https://github.com/pmichaillat/feru)
++ [Paper](greentech_paper.pdf)
++ [Poster](greentech_poster.pdf)
 
 ---
 
 ##### Abstract
 
-This paper reviews unusual uses for olive oil throughout the Mediterranean world. It highlights in particular the challengs arising from excessive or unorthodox consumption of olive oil. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Capacitive sensing technology is widely applied in ubiquitous
+sensing. Its low-power consumption enables it to be used in a wide variety
+of Industry 4.0 applications. Capacitive Sensors can be combined into
+Arrays (CSAs) with mutual capacitive sensing to reduce external wiring
+requirements. For instance, the Texas Instruments (TI) MSP430FR2676
+can capture and process data from 8x8 capacitive sensor grids. However,
+it is limited to supporting only 64 sensors. We propose a design
+incorporating daisy-chaining of CSAs via the I2C serial protocol to
+enable support for 256 sensors. We also demonstrate a rapid prototyping
+implementation of 128 sensors. The extended work we plan is to
+implement the prototype on custom Printed Circuit Boards (PCB) and
+maximize data update frequency. This architecture can find relevance in
+industries like manufacturing and farming, enhancing precision in the
+interaction between robots and humans/objects.
 
 ---
 
-##### Figure 6: Some Uses For Olive Oil
+##### Figure 3: Proof of concept of daisy-chained architecture comprised of two 8x8 CSAs, one controller and periphera
 
-![](paper1.png)
+![](experiment.png)
 
 ---
 
 ##### Citation
 
-Unterholzer, Detlev A., and  Moritz-Maria von Igelfeld. 2013. "Unusual Uses For Olive Oil." *Journal of Oleic Science* 34 (1): 449–489. http://www.alexandermccallsmith.com/book/unusual-uses-for-olive-oil.
+A. Komanduri and A. Nelson, "Daisy-Chaining Embedded Processors for Enhanced Capacitive Sensor Array Resolution," 2024 IEEE Green Technologies Conference (GreenTech), Springdale, AR, USA, 2024, pp. 166-167, doi: 10.1109/GreenTech58819.2024.10520578.
+
+
 
 ```BibTeX
-@article{UI13,
-author = {Detlev A. Unterholzer and Moritz-Maria von Igelfeld},
-year = {2013},
-title ={Unusual Uses For Olive Oil},
-journal = {Journal of Oleic Science},
-volume = {34},
-number = {1},
-pages = {449--489},
-url = {http://www.alexandermccallsmith.com/book/unusual-uses-for-olive-oil}}
+@INPROCEEDINGS{10520578,
+  author={Komanduri, Abhinav and Nelson, Alexander},
+  booktitle={2024 IEEE Green Technologies Conference (GreenTech)}, 
+  title={Daisy-Chaining Embedded Processors for Enhanced Capacitive Sensor Array Resolution}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={166-167},
+  keywords={Wiring;Protocols;Service robots;Printed circuits;Robot sensing systems;Rapid prototyping;Capacitive sensors;Capacitive Sensor Arrays;Soft Robotics;Human-Robot Interaction;Embedded Systems},
+  doi={10.1109/GreenTech58819.2024.10520578}}
+
 ```
 
 ---
 
-##### Related material
-
-+ [Presentation slides](presentation1.pdf)
-+ [Summary of the paper](https://www.penguinrandomhouse.com/books/110403/unusual-uses-for-olive-oil-by-alexander-mccall-smith/)

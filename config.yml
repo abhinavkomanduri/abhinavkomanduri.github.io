@@ -12,21 +12,18 @@ taxonomies:
 
 menu:
     main:
-        - name: Books
-          url: books/
-          weight: 5 
-        - name: Papers
+        - name: About Me
+          url: about/
+          weight: 1 
+        - name: Research and Projects
           url: papers/
           weight: 2
-        - name: Courses
-          url: courses/
+        - name: News
+          url: news/
           weight: 3
-        - name: Data
-          url: data/
-          weight: 4 
-        - name: Blog
-          url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-          weight: 6
+        # - name: Blog
+        #   url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+        #   weight: 6
 
 params:
     description: "This website hosts Abhinav Komanduri's research papers, books, course materials, data, curriculum vitae, and contact information."
@@ -61,20 +58,12 @@ params:
           imageWidth: 160
           imageHeight: 160
           buttons:
-            - name: Papers
+            - name: About Me
+              url: about/
+            - name: Research and Projects
               url: papers/
-            - name: Data
-              url: data/
-            - name: Books
-              url: books/
-            - name: Courses
-              url: courses/
-            - name: Tags
-              url: tags/
-            - name: Archive
-              url: archive/
-            - name: Blog
-              url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
+            - name: News
+              url: news/
 
     socialIcons:
         - name: CV
@@ -94,8 +83,8 @@ params:
         hiddenInList: false
         hiddenInSingle: true
     label:
-      text: "Moritz-Maria von Igelfeld"
-      icon: favicon.ico
+      text: "Abhinav Komanduri"
+      icon: icon.ico
       iconHeight: 18
 
 markup:
