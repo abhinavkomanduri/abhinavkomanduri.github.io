@@ -39,7 +39,24 @@ Physically Unclonable Functions (PUFs) are emerging lightweight hardware securit
 
 ##### Citation
 
-To Appear
+```BibTeX
+@INPROCEEDINGS {11038611,
+    author = { Komanduri, Abhinav and Nelson, Alexander H. },
+    booktitle = { 2025 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops) },
+    title = {{ Power PUFs: Strengthening SRAM PUFs Against Fault Injection on Low-Cost IoT Devices }},
+    year = {2025},
+    volume = {},
+    ISSN = {},
+    pages = {665-668},
+    keywords = {Hardware security;Conferences;Random access memory;Voltage;Physical unclonable function;Robustness;Reproducibility of results;Circuit stability;Circuit faults;Internet of Things},
+    doi = {10.1109/PerComWorkshops65533.2025.00158},
+    url = {https://doi.ieeecomputersociety.org/10.1109/PerComWorkshops65533.2025.00158},
+    publisher = {IEEE Computer Society},
+    address = {Los Alamitos, CA, USA},
+    month =mar}
+
+
+
 
 ---
 
