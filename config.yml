@@ -15,15 +15,18 @@ menu:
         - name: About Me
           url: about/
           weight: 1 
-        - name: Research and Projects
+        - name: Research
           url: papers/
-          weight: 2
+          weight: 3
+        - name: Projects
+          url: projects/
+          weight: 4
         - name: News
           url: news/
-          weight: 3
-        # - name: Blog
-        #   url: https://en.wikipedia.org/wiki/Moritz-Maria_von_Igelfeld_(character)
-        #   weight: 6
+          weight: 5
+        - name: Awards
+          url: awards/
+          weight: 2
 
 params:
     description: "This website hosts Abhinav Komanduri's research papers, books, course materials, data, curriculum vitae, and contact information."
@@ -60,14 +63,18 @@ params:
           buttons:
             - name: About Me
               url: about/
-            - name: Research and Projects
+            - name: Awards
+              url: awards/
+            - name: Research
               url: papers/
+            - name: Projects
+              url: projects/
             - name: News
               url: news/
 
     socialIcons:
         - name: CV
-          url: komanduri_abhinav_cv.pdf
+          url: Komanduri_CV.pdf
         - name: Email
           url: mailto:abhinavk@uark.edu
         - name: Google Scholar
