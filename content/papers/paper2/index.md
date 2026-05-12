@@ -12,6 +12,13 @@ cover:
 editPost:
     URL: "https://percom.org"
     Text: "IEEE International Conference on Pervasive Computing and Communications Workshops (PerCom Workshops)"
+downloads:
+  - name: "Paper"
+    url: "/papers/paper2/percom_paper.pdf"
+  - name: "Poster"
+    url: "/papers/paper2/percom_poster.pdf"
+  - name: "1-Min Poster"
+    url: "/papers/paper2/percom_minute.pdf"
 
 ---
 

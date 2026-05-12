@@ -1,107 +1,25 @@
-baseURL: "https://abhinavkomanduri.github.io" 
+baseURL: "https://abhinavkomanduri.github.io"
 title: Abhinav Komanduri
 theme: PaperMod
 
 enableInlineShortcodes: true
 enableRobotsTXT: true
-pagination:
-  pagerSize: 20
-
-taxonomies:
-    tag: tags
-
-menu:
-    main:
-        - name: About Me
-          url: about/
-          weight: 1 
-        - name: Research
-          url: papers/
-          weight: 3
-        - name: Projects
-          url: projects/
-          weight: 4
-        - name: News
-          url: news/
-          weight: 5
-        - name: Awards
-          url: awards/
-          weight: 2
 
 params:
-    description: "This website hosts Abhinav Komanduri's research papers, books, course materials, data, curriculum vitae, and contact information."
-    author: Abhinav Komanduri
-    # googleAnalyticsID: "G-XXXXX"
-    DateFormat: "January 2006"
-    defaultTheme: light
-    hideFooter: false
-    disableThemeToggle: true
-    ShowShareButtons: false
-    ShowReadingTime: false
-    disableSpecial1stPost: true
-    disableAnchoredHeadings: true
-    ShowPostNavLinks: false
-    ShowBreadCrumbs: false
-    ShowCodeCopyButtons: true
-    ShowAllPagesInArchive: false
-    MainSections: ["books","courses","papers","data"]
-    ShowToc: false
-    disableScrollToTop: true
-    TocOpen: true
-    ShowWordCount: false
-    UseHugoToc: true
-    comments: false
-    math: true
-    profileMode:
-          enabled: true
-          title: Abhinav Komanduri
-          subtitle: "Hi! I am a rising senior at the University of Arkansas, Fayetteville studying Electrical Engineering. My research interests include embedded systems, hardware security, wearable 
-          computing, and human-computing interactions. Applying to PhD programs in the fall! Take a look around to get to know me!"
-          imageUrl: "pfp.png"
-          imageWidth: 160
-          imageHeight: 160
-          buttons:
-            - name: About Me
-              url: about/
-            - name: Awards
-              url: awards/
-            - name: Research
-              url: papers/
-            - name: Projects
-              url: projects/
-            - name: News
-              url: news/
-
-    socialIcons:
-        - name: CV
-          url: Komanduri_CV.pdf
-        - name: Email
-          url: mailto:abhinavk@uark.edu
-        - name: Google Scholar
-          url: https://scholar.google.com/citations?user=dZaIl5EAAAAJ&hl=en&oi=ao
-        - name: GitHub
-          url: https://github.com/abhinavkomanduri
-        - name: Linkedin
-          url: https://www.linkedin.com/in/abhinav-komanduri/
-
-    assets:
-        disableScrollBarStyle: true
-    cover:
-        hiddenInList: false
-        hiddenInSingle: true
-    label:
-      text: "Abhinav Komanduri"
-      icon: icon.ico
-      iconHeight: 18
+  description: "Personal academic website of Abhinav Komanduri, PhD student in Electrical & Computer Engineering at the University of Washington."
+  position: "PhD Student, Electrical & Computer Engineering"
+  school: "University of Washington"
+  email: "akomand@uw.edu"
+  advisor: "Shwetak Patel"
+  advisorURL: "https://homes.cs.washington.edu/~shwetak/"
+  lab: "Ubicomp Lab"
+  labURL: "https://ubicomplab.cs.washington.edu/"
+  cv: "Komanduri_CV.pdf"
+  scholar: "https://scholar.google.com/citations?user=dZaIl5EAAAAJ&hl=en&oi=ao"
+  github: "https://github.com/abhinavkomanduri"
+  linkedin: "https://www.linkedin.com/in/abhinav-komanduri/"
 
 markup:
-    goldmark:
-        renderer:
-            unsafe: true
-    highlight:
-        guessSyntax: true
-        style: autumn 
-    tableOfContents:
-        endLevel: 2
-        ordered: false
-        startLevel: 2
+  goldmark:
+    renderer:
+      unsafe: true

@@ -12,6 +12,11 @@ cover:
 editPost:
     URL: "https://ieeexplore.ieee.org/xpl/conhome/10520247/proceeding"
     Text: "IEEE Green Technologies Conference"
+downloads:
+  - name: "Paper"
+    url: "/papers/paper1/greentech_paper.pdf"
+  - name: "Poster"
+    url: "/papers/paper1/greentech_poster.pdf"
 
 ---
 
