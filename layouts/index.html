@@ -1,105 +1,121 @@
-{{ define "main" }}
-<div style="margin-top:30px"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ .Site.Title }}</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="/favicon.ico">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-<div class="container">
-<div class="inner-container">
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f9f9f7;
+      color: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
 
-<!-- Header: photo + name/info -->
-<div class="row" style="background-color:white">
+    .card {
+      background: white;
+      border: 1px solid #e8e8e8;
+      border-radius: 12px;
+      padding: 3rem 3.5rem;
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
 
-  <div class="col-12 col-md-2" style="margin-top:30px;">
-    <img src="/pfp.png" alt="{{ .Site.Title }}" class="img-fluid profile-photo" style="max-width:150px;">
+    .name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #1a1a1a;
+      margin-bottom: 0.4rem;
+    }
+
+    .role {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: #4b2e83;
+      margin: 0 auto 2rem;
+      border-radius: 2px;
+    }
+
+    .message {
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .message strong {
+      color: #1a1a1a;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .links a {
+      color: #4b2e83;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .links a:hover { text-decoration: underline; }
+
+    .preview-link {
+      font-size: 0.75rem;
+      color: #bbb;
+      text-decoration: none;
+      display: block;
+    }
+
+    .preview-link:hover { color: #888; }
+
+    @media (max-width: 480px) {
+      .card { padding: 2rem 1.5rem; }
+      .name { font-size: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="name">{{ .Site.Title }}</div>
+    <div class="role">
+      {{ .Site.Params.position }}<br>
+      {{ .Site.Params.school }}
+    </div>
+    <div class="divider"></div>
+    <p class="message">
+      My website is currently under construction.<br>
+      Check back in <strong>Fall 2026</strong>.
+    </p>
+    <div class="links">
+      <a href="mailto:{{ .Site.Params.email }}">Email</a>
+      <a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener">Google Scholar</a>
+      <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
+      <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <a class="preview-link" href="/preview/">preview →</a>
   </div>
-
-  <div class="col-md-7 cinfo mt-2 mt-md-4">
-    <div class="myname">{{ .Site.Title }}</div>
-    <div class="mytitle">{{ .Site.Params.position }}</div>
-    <div class="mytitle">{{ .Site.Params.school }}</div>
-    <div class="description">
-      Advised by <a href="{{ .Site.Params.advisorURL }}">{{ .Site.Params.advisor }}</a> |
-      <a href="{{ .Site.Params.labURL }}">{{ .Site.Params.lab }}</a>
-    </div>
-    <div class="mt-2">
-      <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-    </div>
-    <div class="links mt-1">
-      <a href="/{{ .Site.Params.cv }}">CV</a> &nbsp;&middot;&nbsp;
-      <a href="{{ .Site.Params.scholar }}">Google Scholar</a> &nbsp;&middot;&nbsp;
-      <a href="{{ .Site.Params.github }}">GitHub</a> &nbsp;&middot;&nbsp;
-      <a href="{{ .Site.Params.linkedin }}">LinkedIn</a>
-    </div>
-  </div>
-
-</div>
-
-<br>
-
-<!-- Two-column body -->
-<div class="row">
-
-  <!-- Left: bio, publications, projects -->
-  <div class="col-md-8" id="about">
-
-    <!-- Bio -->
-    <div class="subsection">
-      {{ .Content }}
-    </div>
-
-    <!-- Publications -->
-    <h4 class="highlight">Publications</h4>
-    {{ range sort (where .Site.RegularPages "Section" "papers") "Date" "desc" }}
-    <div class="paper-entry mb-4">
-      <div class="paper-thumb">
-        {{ if .Params.cover.image }}
-          <img src="{{ .RelPermalink }}{{ .Params.cover.image }}" alt="thumbnail" class="paper-thumb-img">
-        {{ else }}
-          <div class="paper-thumb-placeholder"></div>
-        {{ end }}
-      </div>
-      <div class="paper-details">
-        <span class="ptitle">{{ .Title }}</span><br>
-        {{ delimit .Params.author ", " }}<br>
-        {{ with .Params.editPost }}
-          {{ if .URL }}<a href="{{ .URL }}" class="venue-link"><em class="venue">{{ .Text }}</em></a>{{ else }}<em class="venue">{{ .Text }}</em>{{ end }}
-        {{ end }}
-        {{ with .Params.downloads }}
-        <div class="btn-row mt-1">
-        {{ range . }}<a href="{{ .url }}" class="pub-btn">{{ .name }}</a>{{ end }}
-        </div>
-        {{ end }}
-      </div>
-    </div>
-    {{ end }}
-
-    <!-- Projects
-    <h4 class="highlight mt-4">Projects</h4>
-    {{ range sort (where .Site.RegularPages "Section" "projects") "Date" "desc" }}
-    <div class="project-entry mb-3">
-      <span class="ptitle">{{ .Title }}</span>
-      {{ with .Params.tags }}{{ range . }}<span class="badge badge-secondary ml-1" style="font-size:0.7em;font-weight:normal;">{{ . }}</span>{{ end }}{{ end }}<br>
-      {{ .Description }}
-    </div>
-    {{ end }} -->
-    <!-- <h4 class="highlight">Awards</h4>
-    <div class="subsection">
-      
-    </div> -->
-  </div>
-
-  <!-- Right: news -->
-  <div class="col-md-4" id="news">
-    <h4 class="highlight">News</h4>
-    {{ range sort (where .Site.RegularPages "Section" "news") "Date" "desc" }}
-    <div class="news-item mb-3">
-      <span class="date">{{ .Date.Format "Jan 2006" }}</span><br>
-      {{ .Description }}
-    </div>
-    {{ end }}
-  </div>
-
-</div>
-
-<div style="margin-bottom:50px"></div>
-</div>
-</div>
-{{ end }}
+</body>
+</html>
